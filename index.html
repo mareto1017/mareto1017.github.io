@@ -163,7 +163,7 @@
             </div>
             <div class="resume-item">
               <h4>정보처리산업기사 필기</h4>
-              <h5>2023.06</h5>
+              <h5>2023.09</h5>
             </div>
             
           </div>
@@ -267,6 +267,7 @@
 	          <div class="col-lg-12 justify-content-center" data-aos="fade-up" data-aos-delay="100">
 	            <ul id="portfolio-flters">
 	              <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-final">FoodBee(팀)</li>
 	              <li data-filter=".filter-semi">LMS(팀)</li>
 	             <!--  <li data-filter=".filter-diary">diary(개인)</li> -->
 	            </ul>
@@ -275,28 +276,129 @@
 		 	
 		 	<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 		 		 <!-- BOOKING -->
+          <div class="container portfolio-item filter-final">
+            <div class="row gy-4">
+              <div class="col-lg-12">
+                <div class="portfolio-info">
+                  <h3>1. FoodBee</h3>
+                </div>
+                <div class="portfolio-description">
+                    <p><b>사내 그룹웨어 프로젝트</b></p>
+                    <div style="margin-bottom: 25px">
+                      <a href="https://github.com/GDJ80-Final/FoodBee_final" class="btn btn-dark" role="button" style="text-decoration: none;" target="_blank">GitHub</a>
+                      <button type="button" class="btn btn-secondary" onclick="window.open('assets/img/portfolio/foodbee_erd.png')">ERD</button>
+                      <a href="http://3.34.244.19/foodbee/login" class="btn btn-info" target="_blank">서비스 URL</a>
+                    </div>
+                    <hr>
+                    
+                                 
+                <div class="col-lg-12">
+                  <div class="portfolio-wrap">
+                    <img src="assets/img/portfolio/foodbee_login.png" class="img-fluid" alt="">
+                    <img src="assets/img/portfolio/foodbee_main.png" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                      <a href="http://3.34.244.19/foodbee/login" target="_blank" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                    </div>
+                  </div>
+                </div>
+            <hr>
+                      
+            <ul>
+                <li style="margin-bottom: 5px"><b>기간 및 인원</b> 
+                  <ul>
+                    <li>기간: 2024.06.24 - 2023.08.05</li>
+                    <li>인원: 4명</li>
+                  </ul>
+                </li>
+                
+                <li style="margin-bottom: 5px"><b>개발 내용</b> 
+                <ul>
+                  <li>Spring을 활용하여 사내 그룹웨어 구현</li>
+                </ul>
+              </li>
+              <li style="margin-bottom: 5px;"><b>담당 기능</b> 
+                <ul>
+                  <li>
+                    [마이페이지]
+                    <ul>
+                      <li>나의 인사/개인 정보 : 세션에 저장된 사원번호를 통해 나의 인사/개인 정보 출력</li>
+                      <li>휴가 내역 : 세션에 저장된 사원번호를 통해 년도별 휴가 내역, 총 휴가, 잔여휴가, 사용휴가 출력</li> 
+                      <li>프로필 사진 수정 : 모달을 띄워 프로필 사진을 수정 기능 구현</li>
+                      <li>전자서명 수정 : 모달을 띄워 canvas API를 이용하여 전자서명 수정 기능 구현</li>
+                    </ul>
+                  </li>
+                  <li>
+                    [사원 조회 페이지]
+                    <ul>		
+                      <li>사원 목록, 검색, 페이징 : 사원 목록을 검색 내용에 맞게 필터링하여 출력</li>
+                      <li>사원 비밀번호 초기화, 인트라넷 등록 이메일 재전송 : 인사팀만 보이는 버튼으로 spring boot starter mail 라이브러리를 사용하여 각 버튼을 클릭시 그에 해당하는 메일을 보내는 기능 구현</li>
+                      <li>사원 개인/인사 정보, 휴가 내역 : 사원의 개인정보는 인사팀만 볼 수 있고 휴가 내역은 마이페이지의 휴가 내역과 동일하게 기능 구현</li>
+                      <li>사원 인사 정보 수정 : 인사팀이 사원의 인사 정보를 수정할 수 있는 기능 구현</li>
+                    </ul>
+                  </li>
+                  <li>
+                    [로그인 페이지]
+                    <ul>
+                      <li>로그인 : 로그인시 사원번호, 이름, 부서번호, 직급을 세션에 저장하는 기능 구현</li>
+                      <li>비밀번호 찾기 : spring boot starter mail 라이브러리를 사용하여 인증번호를 메일로 보내고 인증번호 입력시 임시 비밀번호를 메일로 보내는 기능 구현 </li>
+                    </ul>
+                  </li>
+                  <li>
+                    [기안함 페이지]
+                    <ul>		
+                      <li>기안서 중간승인, 최종승인 : 세션에 저장된 사원번호를 통해 중간 결재자인지, 최종 결재자인지 판별하여 그에 맞게 결재를 할 수 있는 기능 구현</li>
+                      <li>기안서 수정 : 아무 결재가 안되어있을시 기안서를 수정할 수 있는 기능 구현</li>
+                      <li>기안서 취소 : 아무 결재가 안되어있을시 기안서를 취소할 수 있는 기능 구현</li>
+                    </ul>
+                  </li>
+                  <li>
+                    [권한]
+                    <ul>
+                      <li>로그인 : 인터셉터를 통해 세션에 저장된 값으로 로그인한 사용자인지를 판별하여 로그인이 안됐을시 로그인 페이지로 이동하는 기능 구현</li>
+                      <li>직급 및 팀 : 인터셉터를 통해 직급 및 팀이 가진 권한으로 들어갈수있는 페이지인지를 판별하여 권한이 없을시 에러 페이지 또는 ajax일시에는 '권한이없습니다'라는 alert창이 뜨는 기능 구현 </li>
+                    </ui>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+                    <hr>
+                    <ul>
+              <li style="margin-bottom: 5px"><b>개발 환경</b> 
+                <ul>
+                  <li>OS: Windows10</li>
+                  <li>Database : MariaDB</li>
+                  <li>Server: Apache Tomcat(10.1.23)</li>
+                  <li>Language: Java17, HTML5, CSS3, SQL, JavaScript</li>
+                  <li>Library: Bootstrap5, jQuery, JSTL, Lombok, MyBatis, Maven</li>
+                  <li>사용 프로그램: STS4, HeidiSQL</li>
+                </ul>
+              </li>
+              <li style="margin-bottom: 5px"><b>서비스 환경</b> 
+                <ul>
+                  <li>OS: Ubuntu</li>
+                  <li>Database : MariaDB</li>
+                  <li>Platform : AWS Lightsail</li>
+                  <li>Language : Java17</li>
+                </ul>
+              </li>
+            </ul>
+                    <hr>
+                </div>
+              </div>
+            </div>
+        </div>
 			 	<div class="container portfolio-item filter-semi">
 			        <div class="row gy-4">
 			          <div class="col-lg-12">
-			            <div class="portfolio-wrap">
-			             <!--  	<img src="assets/img/portfolio/jointree_login.jpg" class="img-fluid" alt="">			              	
-			            	<img src="assets/img/portfolio/jointree_home.png" class="img-fluid" alt="">  -->           	
-			              	<div class="portfolio-info">
-			              		<a href="http://13.124.167.131/JoinTree/login/login" target="_blank" title="Portfolio Details"><i class="bx bx-link"></i></a>
-		              		</div>
-		             	 </div>
-			          </div>
-			
-			          <div class="col-lg-12">
 			            <div class="portfolio-info">
-			              <h3>1. LMS</h3>
+			              <h3>2. LMS</h3>
 			            </div>
 			            <div class="portfolio-description">
 			                <p><b>대학교 LMS 프로젝트</b></p>
 			              	<div style="margin-bottom: 25px">
 				                <a href="https://github.com/semi-E/semi-E" class="btn btn-dark" role="button" style="text-decoration: none;" target="_blank">GitHub</a>
-				                <button type="button" class="btn btn-secondary" onclick="window.open('assets/img/portfolio/jointree_erd.png')">ERD</button>
-				                <a href="http://3.35.174.18/lms/loginForm.jsp" class="btn btn-info" target="_blank">서비스 URL</a>
+				                <button type="button" class="btn btn-secondary" onclick="window.open('assets/img/portfolio/lms_erd.png')">ERD</button>
+				                <a href="http://3.34.244.19/lms/loginForm.jsp" class="btn btn-info" target="_blank">서비스 URL</a>
 			              	</div>
 			              	<hr>
 			              	
@@ -304,9 +406,9 @@
 				          <div class="col-lg-12">
 				            <div class="portfolio-wrap">
 				              	<img src="assets/img/portfolio/lms_login.png" class="img-fluid" alt="">
-				            	<img src="assets/img/portfolio/lms_main.png" class="img-fluid" alt="">
+				            	  <img src="assets/img/portfolio/lms_main.png" class="img-fluid" alt="">
 				              	<div class="portfolio-info">
-				              		<a href="http://13.124.167.131/JoinTree/login/login" target="_blank" title="Portfolio Details"><i class="bx bx-link"></i></a>
+				              		<a href="http://3.34.244.19/lms/loginForm.jsp" target="_blank" title="Portfolio Details"><i class="bx bx-link"></i></a>
 			              		</div>
 			             	 </div>
 				          </div>
